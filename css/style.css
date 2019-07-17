@@ -1,0 +1,545 @@
+@charset "utf-8";
+/* CSS Document */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+a:link {
+	color: #0CF;
+}
+a:visited {
+	color: #0CF;
+}
+a:hover {
+	color: #FFF;
+}
+a:active {
+	color: #FFF;
+}
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-color: #FFF;
+}
+#pagewrap {
+	background-image: url(../images/drop-shadow.png);
+	background-repeat: repeat-y;
+	width: 1000px;
+}
+#container {
+	background-color:#06F;
+	width: 950px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#mainContent {
+	background-color:#06F;
+	width: 860px;
+	margin-right: 50px;
+	margin-left: 50px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#footer {
+	background-image: url(../images/footer-shadow.png);
+	background-repeat: no-repeat;
+	height: 150px;
+	width: 896px;
+	margin-right: 0px;
+	margin-left: 1px;
+	padding-right: 52px;
+	padding-left: 52px;
+	margin-top: 0px;
+}
+#header {
+	background-color:#06F;
+	width: 900px;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+#navigation {
+	width: 900px;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+#navigation * {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: none;
+}
+div#navigation {
+	position:relative;
+}
+#navigation ul.menu {
+  white-space: nowrap;
+}
+
+/* Geometrical arrangement */
+#navigation ul.menu li {
+	display: inline-block;
+	width: 153px;
+	height: 46px;
+	position: relative;
+	width: auto;
+}
+
+#navigation ul.menu li div {
+  position: absolute;
+  top: 46px;
+  left: 0px;
+}
+
+#navigation ul.menu li div div {
+	position: absolute;
+	top: -6px;
+	left: -188px;
+}
+
+/* Escaping style for lower levels */
+#navigation ul.menu li div ul li {
+	display: block;
+	float: none;
+	width: auto;
+	height: auto;
+}
+
+/** Graphics **/
+
+/* Horizontal sliding doors */
+#navigation ul.menu li a {
+	padding-left: 14px;
+	background-image: url(../images/item1.png);
+	background-repeat: no-repeat;
+	background-position: left -1000px;
+	display: inline-block;
+	margin: 10px 2px;
+}
+
+#navigation ul.menu li a span {
+	padding-right: 14px;
+	padding-left: 0px;
+	background-image: url(../images/item1.png);
+	background-repeat: no-repeat;
+	background-position: right -1000px;
+	display: inline-block;
+	height: 27px;
+	line-height: 27px;
+	cursor: pointer;
+}
+
+#navigation ul.menu li:hover a {
+  background-position: left -54px;
+}
+
+#navigation ul.menu li:hover a span {
+  background-position: right -81px;
+}
+
+#navigation ul.menu li.active a {
+
+  background-position: left 0px;
+}
+
+#navigation ul.menu li.active a span {
+		color: #FFF;
+  background-position: right -27px;
+}
+
+/* Escape Horizontal doors */
+#navigation ul.menu li div ul li a {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  background: none;
+}
+
+#navigation ul.menu li div ul li a span {
+  display: block;
+  padding: 0px;
+  background: none;
+  height: auto;
+  width: 165px;
+  line-height: 25px;
+  padding: 7px 0 7px 9px;
+  white-space: normal;  
+}
+
+/* Vertical sliding doors */
+#navigation ul.menu li div {
+	width: 200px;
+	padding-top: 6px;
+	background-image: url(../images/submenu-top.png);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+}
+
+#navigation ul.menu li div ul {
+	padding: 6px 6px 9px 6px;
+	padding-top: 0;
+	background-image: url(../images/submenu-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+}
+
+/* Hover Effect on Submenus */
+#navigation ul.menu ul li:hover
+{
+
+}
+#navigation ul.menu li.active ul li a span {
+	color: #5E5E5E;
+	width: 165px;}
+#navigation ul.menu li.active ul li a span:hover {
+	color:#09C6F5;}
+	
+#navigation ul.menu ul li a span:hover
+{
+	color:#09C6F5; 
+}
+
+
+/* Main header line */
+#navigation {
+  height: 46px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: url(../images/bg.png) repeat-x;
+  width: 900px;
+}
+
+/* Text shadow */
+#navigation span
+{
+  color: #6CF;
+}
+
+#navigation li:hover>a>span 
+{
+  color: #E8F3F7;
+}
+
+/* Fonts */
+#navigation ul.menu li a span
+{ 
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#navigation ul.menu li div ul li a span
+{ color:#5E5E5E;
+  font-family: Trebuchet MS;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Lines between li */
+#navigation ul.menu li div ul
+{
+  padding-bottom: 8px;
+}
+
+#navigation ul.menu li div ul li:first-child
+{
+  border-top-width: 0px;
+}
+
+
+/* Menu logic */
+#navigation li>div { visibility: hidden; }
+#navigation li:hover>div { visibility: visible; }
+/* */
+
+/* Hover Effect on Submenus */
+#navigation ul.menu ul li:hover
+{
+  background-color: #fff;
+}
+
+/* Lines between li */
+#navigation ul.menu li div ul li
+{
+  background-image:url(../images/hr.gif);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
+#navigation ul.menu ul a.parent {
+  background: url(../images/arrow.gif) no-repeat right center;
+  margin-right: -1px;
+}
+
+
+/* ie7 */
+#navigation ul.menu li {
+  *zoom: 1;
+  *display: inline;
+}
+
+#navigation ul.menu li a {
+  *zoom: 1;
+  *display: inline;
+}
+
+#navigation ul.menu li a span {
+  *zoom: 1;
+  *display: inline;
+}
+
+/* IE6 */
+#navigation ul.menu li a {
+  _background-image: url(images/item.gif);
+}
+
+#navigation ul.menu li a span {
+  _background-image: url(../images/item.gif);
+}
+
+#navigation ul.menu li div { 
+  _background-image: url(../images/submenu-top.gif);
+}
+
+#navigation ul.menu li div ul { 
+  _background-image: url(../images/submenu-bottom.gif);
+}
+
+#navigation ul.menu li a:hover {
+  _background-position: left -54px;
+}
+
+#navigation ul.menu li a:hover span {
+  _background-position: right -81px;
+  _color: #E8F3F7;
+}
+#navigation ul.menu li li a:hover span {
+  _color:#09C6F5; 
+}
+
+/* Menu logic for IE6 */
+#navigation div { _display: none; }
+#navigation div li:hover div { _visibility: visible;_display: block; }
+#navigation div li:hover li:hover div { _display: block; }
+#navigation div li:hover li:hover li:hover div { _display: block; }
+
+
+.portfolio-container-container{
+	position: relative;
+}
+.portfolio-container{
+	background-image: url(images/background.jpg);
+	background-position: bottom;
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+	width: 700px;
+	display: none;
+}
+.portfolio-container .portfolio-mp3-container{
+	position: absolute; top: 0;  text-align: center;
+}
+.portfolio-container .portfolio-mp3 {
+	border: none;
+	
+}
+.portfolio-container img.portfolio-loading-bar{
+	border: none;
+}
+.portfolio-container ul.multimedia-portfolio{
+	list-style-type: none;
+	position: absolute;
+	left: 0;
+	padding: 0 0 0 0;
+	margin: 10px 0 0 0;
+	width: 20000px;
+	
+}
+.portfolio-container ul.multimedia-portfolio li{
+	position: relative;
+	text-align: center;
+	float: left;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.portfolio-container ul.multimedia-portfolio img{
+	border: 1px solid black;
+}
+.portfolio-container .portfolio-object-border{
+	border: 1px solid white;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.portfolio-container ul.multimedia-portfolio li img, .portfolio-container ul.multimedia-portfolio li embed, .portfolio-container ul.multimedia-portfolio li object, .portfolio-container ul.multimedia-portfolio li applet{
+	vertical-align: bottom;
+}
+.portfolio-container .portfolio-title{
+	text-align: center;
+	color: white;
+	font-size: 0.8em;
+	font-family: Arial;
+	
+}
+
+.slider-container{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	margin: 0;
+	padding: 0;
+	
+}
+.ui-slider-1
+{
+	height: 16px;
+	position: relative;
+	left: 0;
+	background: url(images/background-scroll.png);
+	z-index: 1;
+	background-repeat: repeat-x;
+	cursor : pointer;
+	padding: 0;
+	margin: 0;
+}
+.ui-slider-handle
+{
+	width: 62px;
+	height: 13px;
+	background-image: url(images/slider_handle.png);
+	position: absolute;
+	font-size: 1px;
+	overflow: hidden;
+	border: none;
+	position: relative;
+	z-index: 2;
+}
+.portfolio-container .portfolio-scroll-right{
+	background-image: url(images/right_handle.png);
+	position: absolute;
+	right: 0;
+	bottom: 4px;
+	width: 27px;
+	height: 12px;
+	z-index: 500;
+}
+.portfolio-container .portfolio-scroll-left{
+	background-image: url(images/left_handle.png);
+	position: absolute;
+	left: 0;
+	bottom: 4px;
+	width: 27px;
+	height: 12px;
+	z-index: 500;
+}
+
+/* The slider control at bottom */
+div.gallery div.bottom div.slider { height: 22px; width: 200px; position: absolute; top: 15px; right: 60px; background-image: url(images/slider_bg.png); background-position: 0px 1px; }
+* html div.gallery div.bottom div.slider { background-image: url(images/slider_bg.gif); }
+div.gallery div.bottom div.slider div.handle { position: absolute; top: 2px; left: 0px; height: 22px; width: 23px; background-image: url(images/slider.png); }
+
+#image-p{
+	width: 260px;
+	float: left;
+}
+#description-p{
+	width: 550px;
+	float: left;
+	margin-bottom: 80px;
+	padding-left: 10px;
+	margin-left: 40px;
+}
+#description-p a:link {
+	display: block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	background-color: #0CF;
+	color: #FFF;
+	text-decoration: none;
+	padding: 20px 15px 10px 15px;
+}
+#description-p a:visited {
+	display: block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;
+	background-color:#0CF;
+	color: #FFF;
+}
+#description-p a:hover {
+	display: block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;
+	background-color:#666;
+	color: #0CF;
+}
+#description-p a:active {
+	display: block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;
+	background-color:#FFF;
+	color: #000;
+}
+#resume-container{
+	background-color: #FFC;
+	padding: 20px 20px 20px 20px;
+	border: 1.5px solid #000;
+}
+#objective {
+	margin-left: 50px;
+}
+#related-experience{
+	margin-left: 50px;
+}
+#related-experience #list-1{
+	margin-left: 70px;
+}
+#work-experience{
+	margin-left: 50px;
+}
+#work-experience #list-2{
+	margin-left: 70px;
+}
+#skills{
+	margin-left: 50px;
+}
+#education {
+	margin-left: 50px;
+}
+#volunteer {
+	margin-left: 50px;
+}
+
+#footer #left {
+	float: left;
+	height: 100px;
+	width: 372px;
+	margin-left: 50px;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+
+#footer #right {
+	float: right;
+	height: 100px;
+	width: 373px;
+	margin-top: 10px;
+	margin-right: 50px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+}
